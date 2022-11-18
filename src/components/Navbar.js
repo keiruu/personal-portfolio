@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 export default function Navbar() {
   return (
-    <div className='flex'>
+    <div className='flex font-rubik'>
       <Image src={logo} alt="A logo that says AKU" />
       <div>
         <ul>

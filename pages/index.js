@@ -1,5 +1,5 @@
-import Header from "../src/components/header"
-import Navbar from "../src/components/navbar"
+import Header from "../src/components/Header"
+import Navbar from "../src/components/Navbar"
 
 export default function Home() {
   return (
