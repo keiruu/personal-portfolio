@@ -2,10 +2,13 @@
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
+    "./src/components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
+      spacing: {
+        'view': '70vh',
+      },
       colors: {
         transparent: 'transparent',
         current: 'currentColor',
@@ -19,6 +22,7 @@ module.exports = {
         'darkgreen': '#919B81',
         'primary': '#383838',
         'lightgray': '#EEEFF5',
+        'brightpink': '#F87165'
       },
       fontFamily: {
         rubik: ["Rubik", "sans-serif"],
