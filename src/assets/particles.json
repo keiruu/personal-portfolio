@@ -257,7 +257,7 @@
       "mode": "bounce"
     },
     "color": {
-      "value": "#EEEFF5",
+      "value": "#E6E8EF",
       "animation": {
         "enable": true,
         "speed": 14,
