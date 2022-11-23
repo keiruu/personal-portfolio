@@ -13,7 +13,7 @@ export default function Header() {
             pathLength: 1,
             opacity: 1,
             transition: {
-              pathLength: { delay, type: "spring", duration: 1, bounce: 0 },
+              pathLength: { delay, type: "spring", duration: 1, bounce: 0, delay: 0.5},
               opacity: { delay, duration: 0.01 }
             }
           };

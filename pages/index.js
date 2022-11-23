@@ -8,11 +8,13 @@ import Contact from "../src/components/Contact"
 import Footer from "../src/components/Footer"
 import Circles from "../src/components/Circles"
 import ParticlesBackground from "../src/components/ParticlesBackground"
+import Intro from "../src/components/Intro"
 
 export default function Home() {
   return (
     <motion.div className="font-rubik relative">
-      <div className="flex flex-col z-10 absolute w-full">
+        {/* <Intro/> */}
+      <motion.div className="flex flex-col z-10 absolute w-full">
         <Navbar/>
         <Circles/>
         <Header/>
@@ -23,7 +25,7 @@ export default function Home() {
         <footer>
           <Footer/>
         </footer>
-      </div>
+      </motion.div>
       <div className="absolute z-0">
         <ParticlesBackground/>
       </div>
