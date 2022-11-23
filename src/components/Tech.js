@@ -1,11 +1,7 @@
 export default function Tech() {
-
     return(
-        
-        <div className="bg-lightgray text-primary font-rubik flex flex-col items-center justify-center py-24">
-
+        <div className="bg-lightgray text-primary font-rubik flex flex-col items-center justify-center py-24 my-32">
             <h1 className="font-extrabold text-4xl pb-10"> &lt;technologies/&gt;</h1>
-
             <div className="grid grid-cols-3 text-2xl gap-x-20 text-center">
                 <div>html</div>
                 <div>tailwind.css</div>
@@ -20,7 +16,6 @@ export default function Tech() {
                 <div>firebase</div>
                 <div>python</div>
             </div>
-
         </div>
     )
 }

@@ -1,4 +1,5 @@
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faDownload } from '@fortawesome/free-solid-svg-icons'
 
 export default function Header() {
     return (
@@ -15,14 +16,14 @@ export default function Header() {
 
                 <div className="flex gap-5 justify-center items-center pt-5">
 
-                    <button class="bg-transparent border border-brightpink hover:bg-brightpink text-brightpink hover:text-white 
-                        font-light px-4 rounded-full w-[109px] h-[35px] text-sm">
+                    <button className="bg-transparent border border-brightpink hover:bg-brightpink text-brightpink hover:text-white 
+                        font-light px-4 rounded-full w-[109px] h-[35px] text-sm transition-all">
                         learn more
                     </button>
 
-                    <button class="bg-brightpink border border-brightpink hover:bg-transparent text-white hover:text-brightpink 
-                        font-light px-4 rounded-full w-[109px] h-[35px] text-sm">
-                        resume
+                    <button className="bg-brightpink border border-brightpink hover:bg-transparent text-white hover:text-brightpink 
+                        font-light px-4 rounded-full w-[109px] h-[35px] text-sm transition-all">
+                        <FontAwesomeIcon icon={faDownload} /> resume
                     </button>
                 </div>
             </div>
