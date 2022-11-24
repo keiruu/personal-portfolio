@@ -24,10 +24,10 @@ export default function Header() {
         <div className="flex flex-row justify-center h-view items-center">
             <div className="flex flex-col items-center justify-center text-primary font-rubik text-4xl font-bold">
                     <div className='relative z-10'>
-                        <h2 className="font-medium">hi I&apos;m</h2>
-                        <h1 className="text-8xl font-extrabold">abby.</h1>
+                        <h2 className="font-medium text-2xl lg:text-4xl">hi I&apos;m</h2>
+                        <h1 className="text-7xl lg:text-8xl font-extrabold">abby.</h1>
                     </div>
-                    <div className='relative z-0'>
+                    <div className='relative z-0 scale-[0.8] lg:scale-[1.0]'>
                         {/* <Image src={line} /> */}
                         <motion.svg initial="hidden" animate="visible" width="316" height="27" viewBox="0 0 316 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <motion.path variants={draw} d="M5 21.8834C53.6667 17.2168 165 7.48344 221 5.88344C277 4.28344 304.333 5.21678 311 5.88344" stroke="#919B81" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>

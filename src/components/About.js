@@ -4,10 +4,10 @@ import me from '../assets/me.svg'
 
 export default function About() {
   return (
-      <div className='flex justify-center w-full my-40'>
+      <div className='flex justify-center w-full my-40 px-4 lg:p-0 '>
         <div className='flex flex-col gap-8'>
             <h1 className='text-4xl font-bold'>About Me</h1>
-            <div className='flex gap-10'>
+            <div className='flex gap-10 flex-col lg:flex-row'>
                 <div className=''>
                     <Image src={me} alt="A picture of Abigail Kaye Unating"/>
                 </div>

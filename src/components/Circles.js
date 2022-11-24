@@ -13,7 +13,7 @@ export default function Circles() {
   return (
     <motion.div>
         <motion.div className='' animate={{ y: [0, 15, 0]}} transition={{repeat:Infinity, ease: 'easeInOut', duration: 5, delay: 1}}>
-            <div className='absolute right-[28rem] z-1'>
+            <div className='absolute right-[5rem] lg:right-[28rem] z-1'>
                 <div className='group relative'>
                     <span className='absolute z-1 h-16 w-16 cursor-pointer rounded-full bg-lightpeach inline-block p-1 transform group-hover:scale-[1.6] transition-all'>
                         <motion.div animate={{rotate: [0, 360, 0]}} transition={{ repeat: Infinity, ease: "easeInOut", duration: 20}}>
@@ -28,7 +28,7 @@ export default function Circles() {
         </motion.div>
 
         <motion.div className='' animate={{ y: [3, 18, 3]}} transition={{repeat:Infinity, ease: 'easeInOut', duration: 5}}>
-            <div className='absolute top-[6rem] left-[15rem] z-1'>
+            <div className='absolute top-[6rem] left-[1rem] lg:left-[15rem] z-1'>
                 <div className='group relative'>
                     <span className='absolute z-1 h-16 w-16 cursor-pointer rounded-full bg-lightyellow inline-block p-1 transform group-hover:scale-[1.6] transition-all'>
                         <motion.div animate={{rotate: [0, 360, 0]}} transition={{ repeat: Infinity, ease: "easeInOut", duration: 20}}>
@@ -43,7 +43,7 @@ export default function Circles() {
         </motion.div>
         
         <motion.div className='' animate={{ y: [5, 20, 5]}} transition={{repeat:Infinity, ease: 'easeInOut', duration: 5, delay:1.5}}>
-            <div className='absolute top-[28rem] left-[25rem] z-1'>
+            <div className='absolute top-[28rem] left-[18rem] lg:left-[25rem] z-1'>
                 <div className='group relative'>
                     <span className='absolute z-1 h-16 w-16 cursor-pointer rounded-full bg-lightred inline-block p-1 transform group-hover:scale-[1.6] transition-all'>
                         <motion.div animate={{rotate: [0, 360, 0]}} transition={{ repeat: Infinity, ease: "easeInOut", duration: 20}}>
@@ -58,7 +58,7 @@ export default function Circles() {
         </motion.div>
 
         <motion.div className='' animate={{ y: [5, 20, 5]}} transition={{repeat:Infinity, ease: 'easeInOut', duration: 5, delay:2}}>
-            <div className='absolute top-[25rem] right-[19rem] z-1'>
+            <div className='absolute top-[32rem] lg:top-[25rem] right-[21rem] lg:right-[19rem] z-1'>
                 <div className='group relative'>
                     <span className='absolute z-1 h-16 w-16 cursor-pointer rounded-full bg-lightgreen inline-block p-1 transform group-hover:scale-[1.6] transition-all'>
                         <motion.div animate={{rotate: [0, 360, 0]}} transition={{ repeat: Infinity, ease: "easeInOut", duration: 20}}>

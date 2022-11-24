@@ -21,7 +21,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <AnimatePresence>
       {loading ? (
-        <motion.div key='loader'>
+        <motion.div key='loader' className='overflow-hidden'>
           <Intro setLoading={setLoading} />
         </motion.div>
       ) : (
@@ -45,7 +45,7 @@ function MyApp({ Component, pageProps }) {
           //     }
           //   }}
           // >
-            <Component {...pageProps} />
+            <Component {...pageProps}/>
           // </motion.div>
           )}
         </>
