@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../assets/aku.svg'
+import logo from '../assets/aku.png'
 import Image from 'next/image'
 
 export default function Navbar() {
