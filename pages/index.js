@@ -12,9 +12,10 @@ import Intro from "../src/components/Intro"
 
 export default function Home() {
   return (
-    <motion.div className="font-rubik relative">
+    <div className="">
+      <motion.div className="font-rubik overflow-y-hidden">
         {/* <Intro/> */}
-      <motion.div className="flex flex-col z-10 absolute w-full">
+      <motion.div className="flex flex-col z-10 absolute w-full overflow-y-scroll">
         <Navbar/>
         <Circles/>
         <Header/>
@@ -30,5 +31,6 @@ export default function Home() {
         <ParticlesBackground/>
       </div>
     </motion.div>
+    </div>
   )
 }
