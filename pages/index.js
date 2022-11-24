@@ -15,7 +15,7 @@ export default function Home() {
     <div className="">
       <motion.div className="font-rubik overflow-y-hidden">
         {/* <Intro/> */}
-      <motion.div className="flex flex-col z-10 absolute w-full overflow-y-scroll">
+      <motion.div className="flex flex-col z-10 absolute w-full overflow-y-scroll lg:overflow-auto">
         <Navbar/>
         <Circles/>
         <Header/>

@@ -31,7 +31,7 @@ function Project(props) {
 
 export default function Projects() {
   return (
-    <div className="flex flex-col items-center justify-center w-full gap-12 my-32 lg:m-0">
+    <div className="flex flex-col items-center justify-center w-full gap-12 my-32">
         <div className="flex flex-col gap-12 mb-20">
             <div>
                 <h1 className='font-bold text-primary text-2xl lg:text-4xl mx-3 lg:m-0'>Projects I&apos;ve worked on</h1>
