@@ -1,10 +1,12 @@
 import Image from 'next/image'
 import React from 'react'
 import me from '../assets/me.svg'
+import { forwardRef } from "react";
 
-export default function About() {
-  return (
-      <div className='flex justify-center w-full my-40 px-4 lg:p-0 '>
+// eslint-disable-next-line react/display-name
+const About = forwardRef((props, ref) => {
+    return (
+        <div className='flex justify-center w-full py-40 px-4 lg:p-0 ' ref={ref}>
         <div className='flex flex-col gap-8'>
             <h1 className='text-2xl lg:text-4xl font-bold'>About Me</h1>
             <div className='flex gap-10 flex-col lg:flex-row'>
@@ -21,5 +23,8 @@ export default function About() {
             </div>
         </div>
     </div>
-  )
-}
+    )
+  })
+  
+  
+export default About;
