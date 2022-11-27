@@ -64,9 +64,9 @@ export default function Projects() {
 
   return (
     <motion.div className="flex flex-col items-center justify-center w-full gap-12 my-32">
-        <motion.div variants={container} ref={ref} initial="hidden" animate={animationControl} className="flex flex-col gap-12 mb-20">
+        <motion.div variants={container} ref={ref} initial="hidden" animate={animationControl} className="flex flex-col gap-12 mb-20 px-4">
             <motion.div variants={transition}>
-                <h1 className='font-bold text-primary text-2xl lg:text-4xl mx-3 lg:m-0'>Projects I&apos;ve worked on</h1>
+                <h1 className='font-bold text-primary text-2xl lg:text-4xl lg:m-0'>Projects I&apos;ve worked on</h1>
             </motion.div>
             <motion.div variants={transition}>
                 <Project img={takape} title="Takape" link="https://takape-vhlum.mongodbstitch.com" desc="a simple local cafe finder within the Panay Island." tags="express.js react tailwind.css node.js mongodb firebase"/>
