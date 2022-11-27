@@ -1,7 +1,10 @@
 import Image from 'next/image'
-import React from 'react'
+import React, {useEffect} from 'react'
+import { motion, useAnimation } from "framer-motion"
+import { useInView } from "react-intersection-observer"
 import me from '../assets/me.svg'
 import { forwardRef } from "react";
+
 
 // eslint-disable-next-line react/display-name
 const About = forwardRef((props, ref) => {

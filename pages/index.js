@@ -17,7 +17,7 @@ export default function Home() {
   const contactRef = useRef(null);
   const topRef = useRef(null);
   return (
-    <div className="">
+    <motion.div className="">
       <Head>
         <title>Abigail Kaye Unating</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -47,6 +47,6 @@ export default function Home() {
           <ParticlesBackground/>
         </div>
       </motion.div>
-    </div>
+    </motion.div>
   )
 }

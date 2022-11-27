@@ -40,10 +40,12 @@ export default function Header() {
                         font-light px-4 rounded-full w-[109px] h-[35px] text-sm transition-all">
                         learn more
                     </button> */}
-                    <button className="bg-darkgreen border border-darkgreen hover:bg-transparent text-white hover:text-darkgreen 
-                        font-light px-4 rounded-full w-[109px] h-[35px] text-sm transition-all">
-                        <FontAwesomeIcon icon={faDownload} /> resume
-                    </button>
+                    <a href='/resume.pdf' target="_blank" rel="noreferrer">
+                        <button className="bg-darkgreen border border-darkgreen hover:bg-transparent text-white hover:text-darkgreen 
+                            font-light px-4 rounded-full w-[109px] h-[35px] text-sm transition-all">
+                            <FontAwesomeIcon icon={faDownload} /> resume
+                        </button>
+                    </a>
                 </div>
             </div>
 

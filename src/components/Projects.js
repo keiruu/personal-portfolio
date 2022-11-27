@@ -1,16 +1,19 @@
-import React from 'react'
 import Image from 'next/image'
 import takape from '../assets/takape.svg'
 import cybergence from '../assets/cybergence.svg'
 import easi from '../assets/easi.svg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import React, {useEffect} from 'react'
+import { motion, useAnimation } from "framer-motion"
+import { useInView } from "react-intersection-observer"
 
 function Project(props) {
     let tags = props.tags.split(" ")
+
     return (
-        <a href={props.link} rel="noreferrer" target="_blank">
-            <div className='group flex flex-col m-0 lg:flex-row gap-6 rounded-3xl border-2 border-lightgray transition-all cursor-pointer hover:border-darkgreen px-8 py-12 justify-center max-w-[1000px]'>
+        <motion.a href={props.link} rel="noreferrer" target="_blank">
+            <motion.div className='group flex flex-col m-0 lg:flex-row gap-6 rounded-3xl border-2 border-lightgray transition-all cursor-pointer hover:border-darkgreen px-8 py-12 justify-center max-w-[1000px]'>
                 <div className='min-w-[250px] lg:min-w-[350px] group-hover:scale-[1.05] transform transition-all'><Image src={props.img} width="" height=""/></div>
                 <div className='flex flex-col gap-6'>
                     <div className='flex justify-between'>
@@ -24,22 +27,57 @@ function Project(props) {
                         )}
                     </div>
                 </div>
-            </div>
-        </a>
+            </motion.div>
+        </motion.a>
     );
 }
 
 export default function Projects() {
+    const transition = { 
+        hidden: { y: 20, opacity: 0},
+        appear: {
+            y: 1, opacity: 1, 
+            transition: {
+                ease: "circOut",
+                duration: 0.8,
+            }
+        }
+    }
+    
+    const container = {
+        hidden: {},
+        appear: {
+          transition: {
+            staggerChildren: 0.5,
+          }
+        }
+    }
+
+    const {inView, ref} = useInView()
+    const animationControl = useAnimation()
+
+    useEffect(() => {
+        if (inView) {
+            animationControl.start("appear")
+        }
+    }, [animationControl, inView]);
+
   return (
-    <div className="flex flex-col items-center justify-center w-full gap-12 my-32">
-        <div className="flex flex-col gap-12 mb-20">
-            <div>
+    <motion.div className="flex flex-col items-center justify-center w-full gap-12 my-32">
+        <motion.div variants={container} ref={ref} initial="hidden" animate={animationControl} className="flex flex-col gap-12 mb-20">
+            <motion.div variants={transition}>
                 <h1 className='font-bold text-primary text-2xl lg:text-4xl mx-3 lg:m-0'>Projects I&apos;ve worked on</h1>
-            </div>
-            <Project img={takape} title="Takape" link="https://takape-vhlum.mongodbstitch.com" desc="a simple local cafe finder within the Panay Island." tags="express.js react tailwind.css node.js mongodb firebase"/>
-            <Project img={cybergence} title="Cybergence 2021" link="https://cybergence.vercel.app" desc="an event landing site for our school’s acquiantance party in collaboration with other student devs." tags="next.js react tailwind.css"/>
-            <Project img={easi} title="Easi" link="https://easi.vercel.app" desc="a website that allows you to simplify text (web integration for my thesis application)" tags="express.js react tailwind.css node.js firebase"/>
-        </div>
-    </div>
+            </motion.div>
+            <motion.div variants={transition}>
+                <Project img={takape} title="Takape" link="https://takape-vhlum.mongodbstitch.com" desc="a simple local cafe finder within the Panay Island." tags="express.js react tailwind.css node.js mongodb firebase"/>
+            </motion.div>
+            <motion.div variants={transition}>
+                <Project img={cybergence} title="Cybergence 2021" link="https://cybergence.vercel.app" desc="an event landing site for our school’s acquiantance party in collaboration with other student devs." tags="next.js react tailwind.css"/>
+            </motion.div>
+            <motion.div variants={transition}>
+                <Project img={easi} title="Easi" link="https://easi.vercel.app" desc="a website that allows you to simplify text (web integration for my thesis application)" tags="express.js react tailwind.css node.js firebase"/>
+            </motion.div>
+        </motion.div>
+    </motion.div>
   )
 }
