@@ -46,7 +46,7 @@ export default function Tech() {
     return(
         <motion.div variants={container} ref={ref} initial="hidden" animate={animationControl} className="bg-lightgray text-primary font-rubik flex flex-col items-center justify-center py-24 my-32">
             <motion.h1 variants={transition} className="font-bold text-2xl lg:text-4xl pb-10"> &lt;technologies/&gt;</motion.h1>
-            <motion.div variants={container} ref={ref} initial="hidden" animate={animationControl} className="grid grid-cols-3 lg:grid-cols-6 text-5xl lg:text-5xl px-2 lg:p-0 gap-x-16 lg:gap-x-20 gap-y-8 lg:gap-y-10 text-center">
+            <motion.div variants={container} ref={ref} initial="hidden" animate={animationControl} className="grid grid-cols-3 lg:grid-cols-6 text-4xl lg:text-5xl px-2 lg:p-0 gap-x-16 lg:gap-x-20 gap-y-8 lg:gap-y-10 text-center">
                 <motion.div variants={transition}><FontAwesomeIcon icon={faHtml5} /></motion.div>
                 <motion.div variants={transition}><FontAwesomeIcon icon={faCss3Alt} /></motion.div>
                 <motion.div variants={transition}><FontAwesomeIcon icon={faSquareJs} /></motion.div>

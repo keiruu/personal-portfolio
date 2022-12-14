@@ -84,7 +84,7 @@ export default function Projects() {
     }, [animationControl, inView]);
 
   return (
-    <motion.div>
+    <motion.div className='px-2'>
         <motion.div className="flex flex-col items-center justify-center w-full gap-12 pt-32">
             <motion.div variants={container} ref={ref} initial="hidden" animate={animationControl} className="flex flex-col gap-12 mb-20 px-4">
                 <motion.div variants={transition}>
@@ -104,8 +104,8 @@ export default function Projects() {
         </motion.div>
         <motion.div className="flex flex-col items-center justify-center w-full gap-12 pt-14">
             <motion.div className="flex flex-col gap-12 mb-20 px-4">
-                <h1 className='font-semibold text-primary text-xl lg:text-3xl lg:my-4 px-4'>Design Projects</h1>
-                <motion.div className='flex flex-col lg:flex-row gap-10 justify-between px-4'>
+                <h1 className='font-semibold text-primary text-xl lg:text-3xl lg:my-4'>Design Projects</h1>
+                <motion.div className='flex flex-col lg:flex-row gap-10 justify-between'>
                     <DesignProject img={kaabyan} title="Kaabyan" desc="a social media mobile application for a school" link="https://www.figma.com/proto/Iv1BAiMK1Nmu5iDQetfwOW/KAABYAN-HCI?node-id=225%3A3489&scaling=scale-down&page-id=225%3A3186&starting-point-node-id=225%3A3489"/>
                     <DesignProject img={bellyful} title="Bellyful" desc="a desktop inventory app for a restobar" link="https://www.figma.com/file/Y6ZtYWSdt6GFY59dTf5PrZ/Proposed-System-UI?node-id=0%3A1&t=vPxLF2zpXDjQAFyf-1"/>
                     <DesignProject img={others} title="Others" desc="a compilation of designs created during my undergraduate studies" link="https://www.figma.com/file/ukTmdJjSP6pU9F4VeiiT4m/Human-Computer-Interaction-Challenges?node-id=110%3A126&t=3upGl8OhRfvkDc4M-1"/>
