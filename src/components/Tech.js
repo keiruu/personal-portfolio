@@ -1,7 +1,18 @@
 import React, {useEffect} from 'react'
 import { motion, useAnimation } from "framer-motion"
 import { useInView } from "react-intersection-observer"
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faDownload } from '@fortawesome/free-solid-svg-icons'
+import { faHtml5, faCss3Alt, faSquareJs, faReact, faAngular, faNodeJs, faPython, faGitAlt, faGithub, faFigma} from '@fortawesome/free-brands-svg-icons'
+import nextjs from '../assets/nextjs-icon.svg'
+import tailwind from '../assets/tailwind.svg'
+import typescript from '../assets/typescript.svg'
+import firebase from '../assets/firebase.svg'
+import vercel from '../assets/vercel.svg'
+import flutter from '../assets/flutter.svg'
+import mysql from '../assets/mysql.svg'
+import heroku from '../assets/heroku.svg'
+import Image from 'next/image'
 export default function Tech() {
     const transition = { 
         hidden: { y: 20, opacity: 0},
@@ -9,7 +20,7 @@ export default function Tech() {
             y: 1, opacity: 1, 
             transition: {
                 ease: "circOut",
-                duration: 0.5,
+                duration: 0.3,
             }
         }
     }
@@ -18,7 +29,7 @@ export default function Tech() {
         hidden: {},
         appear: {
           transition: {
-            staggerChildren: 0.3,
+            staggerChildren: 0.2,
           }
         }
     }
@@ -35,25 +46,25 @@ export default function Tech() {
     return(
         <motion.div variants={container} ref={ref} initial="hidden" animate={animationControl} className="bg-lightgray text-primary font-rubik flex flex-col items-center justify-center py-24 my-32">
             <motion.h1 variants={transition} className="font-bold text-2xl lg:text-4xl pb-10"> &lt;technologies/&gt;</motion.h1>
-            <motion.div variants={container} ref={ref} initial="hidden" animate={animationControl} className="grid grid-cols-2 lg:grid-cols-3 text-md lg:text-2xl px-2 lg:p-0 gap-x-8 lg:gap-x-20 text-center">
-                <motion.div variants={transition}>html</motion.div>
-                <motion.div variants={transition}>css</motion.div>
-                <motion.div variants={transition}>javascript</motion.div>
-                <motion.div variants={transition}>react</motion.div>
-                <motion.div variants={transition}>next.js</motion.div>
-                <motion.div variants={transition}>tailwind.css</motion.div>
-                <motion.div variants={transition}>angular.js</motion.div>
-                <motion.div variants={transition}>typescript</motion.div>
-                <motion.div variants={transition}>node.js</motion.div>
-                <motion.div variants={transition}>python</motion.div>
-                <motion.div variants={transition}>firebase</motion.div>
-                <motion.div variants={transition}>heroku</motion.div>
-                <motion.div variants={transition}>vercel</motion.div>
-                <motion.div variants={transition}>flutter</motion.div>
-                <motion.div variants={transition}>git & github</motion.div>
-                <motion.div variants={transition}>figma</motion.div>
-                <motion.div variants={transition}>adobe ai & ps</motion.div>
-                <motion.div variants={transition}>mysql</motion.div>
+            <motion.div variants={container} ref={ref} initial="hidden" animate={animationControl} className="grid grid-cols-3 lg:grid-cols-6 text-5xl lg:text-5xl px-2 lg:p-0 gap-x-16 lg:gap-x-20 gap-y-8 lg:gap-y-10 text-center">
+                <motion.div variants={transition}><FontAwesomeIcon icon={faHtml5} /></motion.div>
+                <motion.div variants={transition}><FontAwesomeIcon icon={faCss3Alt} /></motion.div>
+                <motion.div variants={transition}><FontAwesomeIcon icon={faSquareJs} /></motion.div>
+                <motion.div variants={transition}><FontAwesomeIcon icon={faReact} /></motion.div>
+                <motion.div variants={transition}><Image src={nextjs} fill alt='Next.js'/></motion.div>
+                <motion.div variants={transition}><Image src={tailwind} fill alt='Tailwind.css'/></motion.div>
+                <motion.div variants={transition}><FontAwesomeIcon icon={faAngular} /></motion.div>
+                <motion.div variants={transition}><Image src={typescript} fill alt='Typescript'/></motion.div>
+                <motion.div variants={transition}><FontAwesomeIcon icon={faNodeJs} /></motion.div>
+                <motion.div variants={transition}><FontAwesomeIcon icon={faPython} /></motion.div>
+                <motion.div variants={transition}><Image src={heroku} fill alt='Heroku'/></motion.div>
+                <motion.div variants={transition}><Image src={vercel} fill alt='Vercel'/></motion.div>
+                <motion.div variants={transition}><Image src={mysql} fill alt='MySQL'/></motion.div>
+                <motion.div variants={transition}><Image src={flutter} fill alt='Flutter'/></motion.div>
+                <motion.div variants={transition}><FontAwesomeIcon icon={faGitAlt} /></motion.div>
+                <motion.div variants={transition}><FontAwesomeIcon icon={faGithub} /></motion.div>
+                <motion.div variants={transition}><FontAwesomeIcon icon={faFigma} /></motion.div>
+                <motion.div variants={transition}><Image src={firebase} fill alt='Firebase'/></motion.div>
             </motion.div>
         </motion.div>
     )
