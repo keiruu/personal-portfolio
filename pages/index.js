@@ -28,6 +28,7 @@ export default function Home() {
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"/>
         <meta name="msapplication-TileColor" content="#da532c"/>
         <meta name="theme-color" content="#ffffff"/>
+        <meta name="description" content="Abigail Kaye Unating's Web Portfolio"></meta>
       </Head>
       <motion.div className="font-rubik overflow-y-hidden">
         {/* <Intro/> */}
@@ -38,7 +39,7 @@ export default function Home() {
           <Projects/>
           <Tech/>
           <About ref={aboutRef}/>
-          <Contact ref={contactRef}/>
+          <div><Contact ref={contactRef}/></div>
           <footer>
             <Footer topRef={topRef}/>
           </footer>
