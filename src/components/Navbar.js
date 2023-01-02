@@ -20,7 +20,7 @@ const Navbar = ({ aboutRef, contactRef }) => {
       <div className='w-14 lg:block hidden'>
         <Image src={logo} alt="A logo that says AKU" />
       </div>
-      <ul className='flex gap-16 items-center '>
+      <ul className='flex gap-16 items-center'>
         <li onClick={about} className='cursor-pointer transition duration-200 border-b-2 border-transparent hover:border-darkgreen hover:text-darkgreen'>about</li>
         <div className='w-14 lg:hidden block'>
           <Image src={logo} alt="A logo that says AKU" />

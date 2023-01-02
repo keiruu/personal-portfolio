@@ -93,13 +93,18 @@ export default function Projects() {
                 <div>
                     <motion.div variants={transition}>
                         <h1 className='font-bold text-primary text-2xl lg:text-4xl lg:m-0'>Projects I&apos;ve worked on</h1>
+                        <div className='hidden lg:flex relative z-0 scale-[0.8] lg:scale-[1.0] lg:mb-4 m-0'>
+                            <motion.svg width="420" height="36" viewBox="0 0 316 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <motion.path  d="M5 21.8834C53.6667 17.2168 165 7.48344 221 5.88344C277 4.28344 304.333 5.21678 311 5.88344" stroke="#919B81" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </motion.svg>
+                        </div>
                         <h2 className='font-semibold text-primary text-xl lg:text-3xl pt-16 mb-8'>Web Projects</h2>
                     </motion.div>
-                    <motion.div variants={transition} className='mb-8'>
+                    <motion.div variants={transition} className='mb-0 lg:mb-8'>
                         <Project img={takape} title="Takape" link="https://takape-vhlum.mongodbstitch.com" desc="a simple local cafe finder within the Panay Island." tags="express.js react tailwind.css node.js mongodb firebase"/>
                     </motion.div>
                     <motion.a href='#' rel="noreferrer" target="_blank" className='group pointer-events-none'>
-                        <motion.div className='w-full border border-[1px] border-lightgray group-hover:border-darkgreen transition-all flex flex-col items-center max-w-[500px] p-6 gap-4'>
+                        <motion.div className='hidden lg:flex w-full border border-[1px] border-lightgray group-hover:border-darkgreen transition-all flex flex-col items-center max-w-[500px] p-6 gap-4'>
                             <motion.div className='my-4'><Image src={more} width="" height=""/></motion.div>
                             <motion.div className='w-full flex flex-col gap-4'>
                                 <motion.div className='flex gap-3 items-center relative'>
